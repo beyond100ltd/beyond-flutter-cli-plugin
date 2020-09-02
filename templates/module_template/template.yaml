@@ -1,0 +1,14 @@
+#Yaml file for configuring the template.
+#The template name
+name: module
+#The template description
+description: Create Beyond module template.
+#Path where files should be sent
+to: lib/app/screens/@name
+#Arguments to be passed when executing this template
+# You can define as many arguments as you want.
+args:
+  - name
+# - other1
+# - other2
+# - other3
