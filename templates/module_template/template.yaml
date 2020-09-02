@@ -4,11 +4,11 @@ name: module
 #The template description
 description: Create Beyond module template.
 #Path where files should be sent
-to: lib/app/screens/@name
+to: lib/app/screens/@module
 #Arguments to be passed when executing this template
 # You can define as many arguments as you want.
 args:
-  - name
+  - module
 # - other1
 # - other2
 # - other3
