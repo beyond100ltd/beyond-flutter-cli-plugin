@@ -1,3 +1,4 @@
 commands:
   build: flutter pub run build_runner build --delete-conflicting-outputs
   translate: flutter pub run gen_lang:generate --source-dir "assets/strings"
+  pwd: pwd
