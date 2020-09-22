@@ -1,9 +1,8 @@
 part of beyond.modules.screens.@module;
 
 class @ModuleScreen extends StatefulWidget {
-  final @ModuleController controller;
 
-  @ModuleScreen({@required this.controller, Key key}) : super(key: key);
+  @ModuleScreen({Key key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => _@ModuleState();
@@ -14,12 +13,13 @@ class _@ModuleState extends State<@ModuleScreen> {
 
   @override
   void initState() {
-    _controller = widget.controller;
+    _controller = Get.find();
     super.initState();
   }
 
   @override
   void dispose() {
+    Get.delete<@ModuleController>();
     super.dispose();
   }
 
@@ -34,7 +34,13 @@ class _@ModuleState extends State<@ModuleScreen> {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           color: Theme.of(context).backgroundColor,
-          child: Container(),
+          child: FixedSizeLayoutGrid(
+            columnCount: 8,
+            rowCount: 24,
+            columnGap: UIConstants.gridStep * 2,
+            rowGap: UIConstants.gridStep * 2,
+            children:[]
+          ),
         ),
       ),
     );
